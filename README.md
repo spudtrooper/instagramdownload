@@ -10,3 +10,9 @@ go run download.go --infile some-file.log
 ```
 
 The images will appear in `data`.
+
+Or just run (I though I'd do something with the notes)
+
+```
+grep 640w some-file.log | awk '{print $3}' | sort | uniq | xargs wget
+```
